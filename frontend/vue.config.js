@@ -1,3 +1,4 @@
+/*
 module.exports = {
   productionSourceMap: false,
   devServer: {
@@ -14,3 +15,4 @@ module.exports = {
   },
   outputDir: "../client-build",
 };
+*/
