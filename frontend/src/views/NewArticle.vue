@@ -124,7 +124,7 @@ export default {
       fd.append("paragraphe1", this.paragraphe1);
       fd.append("paragraphe2", this.paragraphe2);
       fd.append("image", this.selectFile, this.selectFile.name);
-      axios.post(`blog`, fd).then((res) => {
+      axios.post(`http://kareshmaart.com/api/auth/blog`, fd).then((res) => {
         console.log(res, "Nouvel article envoyé");
         alert("Ta photo a bien été enregistré");
         let route = this.$router.resolve({ path: "/" });
