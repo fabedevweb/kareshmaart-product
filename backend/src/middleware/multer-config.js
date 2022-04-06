@@ -14,7 +14,7 @@ const storage = multer.diskStorage({
     //"images" correspond au dossier "images" que j'ai crée dans le dossier backend
     callback(
       null,
-      "/Users/fabriceavrila/Desktop/Mes projets/kareshma/code_kareshmaart/backend/images"
+      "/Users/fabriceavrila/Desktop/Mes projets/kareshma/kareshmaart-product/backend/images"
     );
   },
   //filename explique à multer quel nom de fichier utiliser pour éviter d'avoir un bug si deux fichiers ont le même nom
