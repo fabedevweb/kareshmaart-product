@@ -36,7 +36,7 @@ app.use(bodyParser.json());
 // Path permet à l'API de savoir ou se trouve les images à récupérer
 app.use("/images", express.static(path.join(__dirname, "images")));
 app.use(express.static(path.join(__dirname, "../client-build")));
-app.get("http://109.234.162.107:3306/api/", (req, res) => {
+app.get("http://109.234.162.107:3000/api/", (req, res) => {
   res.sendFile(path.join(__dirname, "../client-build/index.html"));
 });
 
