@@ -2,7 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 // Path permet à l'API de savoir ou se trouve les images à récupérer
 const path = require("path");
-// import employee routes
+// import employee route
 const userRoutes = require("./src/routes/user");
 const thingRoutesYour = require("./src/routes/thingYour");
 const thingRoutesMe = require("./src/routes/thingMe");
