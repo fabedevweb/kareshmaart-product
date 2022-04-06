@@ -31,12 +31,12 @@ app.use(bodyParser.json());
 //Importer les images
 // Path permet à l'API de savoir ou se trouve les images à récupérer
 app.use("/images", express.static(path.join(__dirname, "images")));
-/*
+
 app.use(express.static(path.join(__dirname, "../client-build")));
-app.get("http://109.234.162.107:3000/api/", (req, res) => {
+app.get("http://kareshmaart.com/api/", (req, res) => {
   res.sendFile(path.join(__dirname, "../client-build/index.html"));
 });
-*/
+
 app.use("/api/auth", userRoutes);
 app.use("/api/your/", thingRoutesYour);
 app.use("/api/me/", thingRoutesMe);
