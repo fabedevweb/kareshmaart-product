@@ -1,7 +1,7 @@
 import axios from "axios";
 
 let admin = localStorage.getItem("admin");
-axios.defaults.baseURL = "http://localhost:3306/api/";
+axios.defaults.baseURL = "http://109.234.162.107:3306/api/";
 
 if (!admin) {
   admin = {

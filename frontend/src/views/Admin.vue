@@ -62,7 +62,7 @@ export default {
     },
     login: function () {
       axios
-        .post(`http://localhost:3306/api/auth/login`, {
+        .post(`http://109.234.162.107/api/auth/login`, {
           email: this.email,
           password: this.password,
         })
