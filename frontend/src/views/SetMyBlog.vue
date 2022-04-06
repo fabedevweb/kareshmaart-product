@@ -61,7 +61,7 @@ export default {
     deleteCanvas(picture) {
       if (confirm("Es-tu sûr de vouloire supprimer ce tableau ?")) {
         axios
-          .delete(`http://localhost:3000/api/blog/${picture.id}}`)
+          .delete(`/blog/${picture.id}}`)
           .then((res) => {
             this.pictures = res.data;
             this.$router.push("Create");

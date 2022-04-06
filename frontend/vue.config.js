@@ -1,7 +1,7 @@
 module.exports = {
   productionSourceMap: false,
   devServer: {
-    proxy: "http://localhost:3000",
+    proxy: "http://localhost:3306",
   },
   devServer: {
     proxy: {
@@ -12,5 +12,5 @@ module.exports = {
       },
     },
   },
-  outputDir: "../client-build",
+  //outputDir: "../client-build",
 };
