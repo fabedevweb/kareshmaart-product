@@ -15,7 +15,7 @@ const port = process.env.PORT || 3306;
 app.use((req, res, next) => {
   res.setHeader(
     "Access-Control-Allow-Origin",
-    "http://109.234.162.107/api/auth/login",
+    "http://109.234.162.107:3306/api/auth/login",
     "*"
   );
   res.setHeader(
