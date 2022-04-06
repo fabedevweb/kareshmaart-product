@@ -41,7 +41,7 @@ export default {
   },
   mounted: function () {
     axios
-      .get(`http://localhost:3000/api/blog`)
+      .get(`http://localhost:3306/api/blog`)
       .then((res) => {
         this.pictures = res.data;
         console.log(this.pictures);

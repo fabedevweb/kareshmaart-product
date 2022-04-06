@@ -73,7 +73,7 @@ export default {
       if (confirm("Es-tu sûr de vouloire supprimer ce tableau ?")) {
         alert("oui");
         axios
-          .delete(`http://localhost:3000/api/me/${picture.id}}`)
+          .delete(`http://localhost:3306/api/me/${picture.id}}`)
           .then((res) => {
             this.pictures = res.data;
             console.log(this.pictures);
