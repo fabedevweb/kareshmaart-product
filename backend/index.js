@@ -11,7 +11,7 @@ const thingRoutesBlog = require("./src/routes/thingBlog");
 const app = express();
 
 // setup the server port
-const port = process.env.PORT || 3306;
+const port = process.env.PORT || 3000;
 app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader(
@@ -32,7 +32,7 @@ app.use(bodyParser.json());
 // Path permet à l'API de savoir ou se trouve les images à récupérer
 app.use("/images", express.static(path.join(__dirname, "images")));
 app.use(express.static(path.join(__dirname, "../client-build")));
-app.get("http://localhost:3306/api/", (req, res) => {
+app.get("http://localhost:3000/api/", (req, res) => {
   res.sendFile(path.join(__dirname, "../client-build/index.html"));
 });
 
