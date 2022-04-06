@@ -13,7 +13,11 @@ const app = express();
 // setup the server port
 const port = process.env.PORT || 3306;
 app.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader(
+    "Access-Control-Allow-Origin",
+    "http://109.234.162.107/api/auth/login",
+    "*"
+  );
   res.setHeader(
     "Access-Control-Allow-Headers",
     "Origin, X-Requested-With, Content, Accept, Content-Type, Authorization"
