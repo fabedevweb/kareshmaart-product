@@ -63,7 +63,7 @@ export default {
   },
   mounted: function () {
     axios
-      .get(`/me`)
+      .get(`me`)
       .then((res) => {
         this.pictures = res.data;
         console.log(this.pictures);
