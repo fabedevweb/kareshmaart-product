@@ -4,7 +4,6 @@
       <img
         class="container-tableauImg__img fade-in"
         src="../assets/tableau.webp"
-        style="width: 100%"
         alt=""
       />
     </div>
@@ -73,11 +72,9 @@ export default {
 </script>
 
 <style>
-img {
-  height: 700px;
-}
 .container-tableauImg__img {
-  object-fit: cover;
+  object-fit: contain;
+  width: 100%;
 }
 
 .realisations {

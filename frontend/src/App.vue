@@ -1,90 +1,97 @@
 <template>
   <div id="app">
-    <nav
-      class="navbar pb-0 navbar-expand-lg navbar-light transparent"
-      v-if="hideMenu()"
-    >
-      <div class="container-fluid flex-column w-100 mt-5">
-        <div>
-          <p class="navigation-name-p">KareshmaArt</p>
-        </div>
-        <div
-          class="container-img-social d-flex justify-content-between mx-auto mb-5"
-        >
-          <a href="https://www.facebook.com/yashnajenna" target="_blank"
-            ><i class="fa-brands fa-facebook-square me-2"></i
-          ></a>
-          <a
-            href="https://www.instagram.com/kareshma_noursai_art/"
-            target="_blank"
-            ><i class="fa-brands fa-instagram-square ms-2 me-2"></i
-          ></a>
-          <a href="https://wa.me/23057184367" target="_blank"
-            ><i class="fa-brands fa-whatsapp-square ms-2 me-2"></i
-          ></a>
-        </div>
-      </div>
-    </nav>
-    <VueScrollFixedNavbar v-if="hideMenu()">
-      <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container-fluid">
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
+    <div style="background-color: rgba(255, 255, 255, 0.5)">
+      <nav
+        class="navbar pb-0 navbar-expand-lg navbar-light transparent"
+        v-if="hideMenu()"
+      >
+        <div class="container-fluid flex-column w-100 mt-5">
+          <div class="w-100">
+            <p class="navigation-name-p">KareshmaArt</p>
+          </div>
+          <div
+            class="container-img-social d-flex justify-content-between mx-auto mb-5"
           >
-            <i class="fa-solid fa-bars"></i>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <div
-              class="navbar-nav d-flex justify-content-between mx-auto"
-              style="background-color: rgba(0, 0, 0, 0.5)"
-            >
-              <router-link
-                to="/"
-                class="nav-link active mx-auto jello-horizontal"
-                aria-current="page"
-                href="#"
-                ><i class="fa-solid fa-house"></i> ACCUEIL</router-link
-              >
-              <router-link
-                to="/realisations"
-                class="nav-link active mx-auto"
-                aria-current="page"
-                href="#"
-              >
-                <i class="fa-solid fa-palette"></i> TABLEAUX
-              </router-link>
-              <router-link
-                to="/blog"
-                class="nav-link active mx-auto"
-                aria-current="page"
-                href="#"
-                ><i class="fa-solid fa-newspaper"></i> BLOG</router-link
-              >
-              <router-link
-                to="/moi"
-                class="nav-link active mx-auto"
-                aria-current="page"
-                href="#"
-                ><i class="fa-solid fa-face-smile"></i> MOI</router-link
-              >
-              <router-link
-                to="/contact"
-                class="nav-link active mx-auto"
-                aria-current="page"
-                href="#"
-                ><i class="fa-solid fa-address-card"></i> CONTACT</router-link
-              >
-            </div>
+            <a
+              class="fa-brands fa fa-facebook"
+              href="https://www.facebook.com/yashnajenna"
+              target="_blank"
+            ></a>
+            <a
+              class="fa-brands fa fa-instagram"
+              href="https://www.instagram.com/kareshma_noursai_art/"
+              target="_blank"
+            ></a>
+            <a
+              class="fa-brands fa fa-whatsapp"
+              href="https://wa.me/23057184367"
+              target="_blank"
+            ></a>
           </div>
         </div>
       </nav>
-    </VueScrollFixedNavbar>
+      <VueScrollFixedNavbar v-if="hideMenu()">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container-fluid">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <div
+                class="navbar-nav d-flex justify-content-between mx-auto"
+                style="background-color: rgba(0, 0, 0, 0.5)"
+              >
+                <router-link
+                  to="/"
+                  class="nav-link active mx-auto jello-horizontal"
+                  aria-current="page"
+                  href="#"
+                  ><i class="fa-solid fa-house"></i> ACCUEIL</router-link
+                >
+                <router-link
+                  to="/realisations"
+                  class="nav-link active mx-auto"
+                  aria-current="page"
+                  href="#"
+                >
+                  <i class="fa-solid fa-palette"></i> TABLEAUX
+                </router-link>
+                <router-link
+                  to="/blog"
+                  class="nav-link active mx-auto"
+                  aria-current="page"
+                  href="#"
+                  ><i class="fa-solid fa-newspaper"></i> BLOG</router-link
+                >
+                <router-link
+                  to="/moi"
+                  class="nav-link active mx-auto"
+                  aria-current="page"
+                  href="#"
+                  ><i class="fa-solid fa-face-smile"></i> MOI</router-link
+                >
+                <router-link
+                  to="/contact"
+                  class="nav-link active mx-auto"
+                  aria-current="page"
+                  href="#"
+                  ><i class="fa-solid fa-address-card"></i> CONTACT</router-link
+                >
+              </div>
+            </div>
+          </div>
+        </nav>
+      </VueScrollFixedNavbar>
+    </div>
+
     <router-view></router-view>
     <Footer></Footer>
   </div>
@@ -144,7 +151,6 @@ export default {
   color: black !important;
   font-size: 3rem;
   margin-top: 300px;
-  text-shadow: 0 -4px 0 black, 0 3px 0 black;
   margin-top: 0 !important;
   margin-bottom: 0 !important;
 }
@@ -181,7 +187,6 @@ export default {
 .fa-brands:hover {
   -webkit-animation: jello-horizontal 0.9s both;
   animation: jello-horizontal 0.9s both;
-  color: #f0e91a;
 }
 /* ----------------------------------------------
  * Generated by Animista on 2022-3-20 10:0:52
@@ -257,14 +262,36 @@ export default {
 }
 
 /*Réseaux sociaux*/
-.fa-brands {
-  color: #f0e91a;
-  cursor: pointer;
-  font-size: 4rem;
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
 }
-
+.container-img-social {
+  width: 42%;
+}
 .container-img-social_item:hover {
   -webkit-animation: wobble-hor-bottom 0.8s both;
   animation: wobble-hor-bottom 0.8s both;
+}
+/* Facebook */
+.fa-facebook {
+  background: #3b5998;
+  color: white;
+  width: 70px;
+}
+.fa-instagram {
+  background: linear-gradient(#400080, transparent),
+    linear-gradient(200deg, #d047d1, #ff0000, #ffff00);
+  color: white;
+  width: 70px;
+}
+.fa-whatsapp {
+  background: #3ac371;
+  color: white;
+  width: 70px;
 }
 </style>
