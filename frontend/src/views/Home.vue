@@ -39,7 +39,7 @@ export default {};
   font-weight: 900;
   font-style: normal;
   color: black !important;
-  font-size: 4rem;
+  font-size: 3rem;
 }
 .navigation-name {
   font-family: new-order, sans-serif;
