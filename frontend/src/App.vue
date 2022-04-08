@@ -31,64 +31,69 @@
         </div>
       </nav>
       <VueScrollFixedNavbar v-if="hideMenu()">
-        <nav class="navbar navbar-expand-lg navbar-light">
-          <div class="container-fluid">
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarNav"
-              aria-controls="navbarNav"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <i class="fa-solid fa-bars"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <div
-                class="navbar-nav d-flex justify-content-between mx-auto"
-                style="background-color: rgba(0, 0, 0, 0.5)"
-              >
-                <router-link
+        <b-navbar toggleable="lg" type="dark" variant="info">
+          <b-navbar-brand href="#"
+            ><router-link
+              to="/"
+              class="nav-link active mx-auto jello-horizontal"
+              aria-current="page"
+              href="#"
+              ><i class="fa-solid fa-house"></i></router-link
+          ></b-navbar-brand>
+
+          <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+
+          <b-collapse id="nav-collapse" is-nav>
+            <b-navbar-nav>
+              <b-nav-item href="#" class="d-flex mx-auto"
+                ><router-link
                   to="/"
                   class="nav-link active mx-auto jello-horizontal"
                   aria-current="page"
                   href="#"
                   ><i class="fa-solid fa-house"></i> ACCUEIL</router-link
-                >
-                <router-link
+                ></b-nav-item
+              >
+              <b-nav-item href="#" class="d-flex mx-auto"
+                ><router-link
                   to="/realisations"
                   class="nav-link active mx-auto"
                   aria-current="page"
                   href="#"
                 >
                   <i class="fa-solid fa-palette"></i> TABLEAUX
-                </router-link>
-                <router-link
+                </router-link></b-nav-item
+              >
+              <b-nav-item href="#" class="d-flex mx-auto"
+                ><router-link
                   to="/blog"
                   class="nav-link active mx-auto"
                   aria-current="page"
                   href="#"
                   ><i class="fa-solid fa-newspaper"></i> BLOG</router-link
-                >
-                <router-link
+                ></b-nav-item
+              >
+              <b-nav-item href="#" class="d-flex mx-auto"
+                ><router-link
                   to="/moi"
                   class="nav-link active mx-auto"
                   aria-current="page"
                   href="#"
                   ><i class="fa-solid fa-face-smile"></i> MOI</router-link
-                >
-                <router-link
+                ></b-nav-item
+              >
+              <b-nav-item href="#" class="d-flex mx-auto"
+                ><router-link
                   to="/contact"
                   class="nav-link active mx-auto"
                   aria-current="page"
                   href="#"
                   ><i class="fa-solid fa-address-card"></i> CONTACT</router-link
-                >
-              </div>
-            </div>
-          </div>
-        </nav>
+                ></b-nav-item
+              >
+            </b-navbar-nav>
+          </b-collapse>
+        </b-navbar>
       </VueScrollFixedNavbar>
     </div>
 
@@ -104,6 +109,11 @@ export default {
   components: {
     Footer,
     VueScrollFixedNavbar,
+  },
+  data() {
+    return {
+      open: null,
+    };
   },
   methods: {
     hideMenu() {
@@ -176,10 +186,8 @@ export default {
   background-attachment: fixed;
 }
 .router-link-exact-active {
-  border-bottom: 2px solid yellow;
-  color: yellow !important;
+  color: black !important;
   cursor: pointer;
-  width: 200px;
 }
 /* ANIMATION ROUTER-LINK*/
 
@@ -267,12 +275,10 @@ export default {
   font-size: 30px;
   text-align: center;
   text-decoration: none;
-  margin: 5px 2px;
+  margin: 5px 10px;
   border-radius: 50%;
 }
-.container-img-social {
-  width: 42%;
-}
+
 .container-img-social_item:hover {
   -webkit-animation: wobble-hor-bottom 0.8s both;
   animation: wobble-hor-bottom 0.8s both;
