@@ -51,7 +51,7 @@
                   class="nav-link active mx-auto jello-horizontal"
                   aria-current="page"
                   href="#"
-                  ><i class="fa-solid fa-house"></i> ACCUEIL</router-link
+                  ><i class="fa-solid fa-house"></i>ACCUEIL</router-link
                 ></b-nav-item
               >
               <b-nav-item href="#" class="d-flex mx-auto"
