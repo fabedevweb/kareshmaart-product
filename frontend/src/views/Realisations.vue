@@ -45,12 +45,14 @@
           </a>
         </div>
       </div>
+
       <div id="scroll_to_top">
-        <a href="#Realisations"
-          ><i
-            class="fa-solid fa-circle-arrow-up"
-            style="font-size: 5rem; color: yellow"
-          ></i
+        <a href="#Realisations" style="font-size: 1.4rem; color: #">
+          <b-icon
+            icon="circle-fill"
+            animation="cylon-vertical"
+            font-scale="2"
+          ></b-icon
         ></a>
       </div>
     </div>
@@ -183,11 +185,11 @@ export default {
   position: fixed;
   width: 25px;
   height: 25px;
-  bottom: 60px;
-  right: 60px;
+  bottom: 85px;
+  right: 71px;
 }
 #scroll_to_top img {
-  width: 25px;
+  width: 10px;
 }
 /* Apparition des images*/
 .fade-in {
