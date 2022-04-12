@@ -1,5 +1,13 @@
 <template>
   <div>
+    <div class="bg-dark pt-3 pb-3 mb-3">
+      <div class="container d-flex justify-content-between">
+        <button @click="returnPage()" class="btn btn-primary text-white">
+          Return
+        </button>
+        <h1 class="text-white">Mon blog</h1>
+      </div>
+    </div>
     <div
       class="card mb-3"
       :key="index"
@@ -36,12 +44,15 @@ export default {
       picture: [],
       pictures: [],
       name: null,
+      price: null,
+      description: null,
+      revele: false,
       imageCanvas: null,
     };
   },
   mounted: function () {
     axios
-      .get(`http://109.234.162.107/api/blog`)
+      .get(`/blog`)
       .then((res) => {
         this.pictures = res.data;
         console.log(this.pictures);
@@ -58,13 +69,22 @@ export default {
     nameP(picture) {
       console.log(picture.name);
     },
+    toggleModale(picture) {
+      this.revele = !this.revele;
+      this.imageCanvas = picture.picture;
+      this.name = picture.name;
+      this.price = picture.price;
+      this.description = picture.description;
+      console.log(picture.picture);
+    },
     deleteCanvas(picture) {
       if (confirm("Es-tu sûr de vouloire supprimer ce tableau ?")) {
         axios
           .delete(`/blog/${picture.id}}`)
           .then((res) => {
             this.pictures = res.data;
-            this.$router.push("Create");
+            location.reload();
+            this.$router.push("/SetMyBlog");
           })
           .catch(function (error) {
             // handle error
@@ -73,6 +93,9 @@ export default {
       } else {
         this.$router.push("SetMyBlog");
       }
+    },
+    returnPage() {
+      this.$router.push("/create");
     },
   },
 };
