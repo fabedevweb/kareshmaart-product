@@ -29,7 +29,9 @@
           >
             <div class="cards d-flex mx-auto rounded">
               <div>
-                <h2 class="text-white cards-inspiration">Mes inspirations</h2>
+                <h2 class="text-white cards-inspiration">
+                  Voir mes inspirations
+                </h2>
               </div>
             </div>
           </a>
@@ -39,7 +41,9 @@
           >
             <div class="cards d-flex mx-auto rounded">
               <div>
-                <h2 class="text-white cards-inspiration">Vos inspirations</h2>
+                <h2 class="text-white cards-inspiration">
+                  Voir vos inspirations
+                </h2>
               </div>
             </div>
           </a>
@@ -47,7 +51,7 @@
       </div>
 
       <div id="scroll_to_top">
-        <a href="#Realisations" style="font-size: 1.4rem; color: #">
+        <a href="#Realisations" style="font-size: 1.4rem; color: #deca1f">
           <b-icon
             icon="circle-fill"
             animation="cylon-vertical"
@@ -99,11 +103,11 @@ export default {
   box-shadow: 0 9px #999;
 }
 .button:hover {
-  background-color: #3e8e41;
+  background-color: #deca1f;
 }
 
 .button:active {
-  background-color: #3e8e41;
+  background-color: #deca1f;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }

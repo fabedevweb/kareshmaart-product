@@ -141,8 +141,8 @@ body {
   left: 50%;
   width: 200px;
   height: 200px;
-  transform: translate(-140%, -50%);
-  background-color: yellow;
+  transform: translate(-200%, -50%);
+  background-color: #deca1f;
   opacity: 0.8;
   border-radius: 50%;
   transition: 0.2s;

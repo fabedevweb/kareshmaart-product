@@ -54,11 +54,12 @@
       </div>
     </div>
     <div id="scroll_to_top">
-      <a href="#Blog"
-        ><i
-          class="fa-solid fa-circle-arrow-up"
-          style="font-size: 5rem; color: yellow"
-        ></i
+      <a href="#Realisations" style="font-size: 1.4rem; color: #deca1f">
+        <b-icon
+          icon="circle-fill"
+          animation="cylon-vertical"
+          font-scale="2"
+        ></b-icon
       ></a>
     </div>
   </div>

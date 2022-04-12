@@ -31,7 +31,7 @@
         </div>
       </nav>
       <VueScrollFixedNavbar v-if="hideMenu()">
-        <b-navbar toggleable="lg" type="dark" variant="info">
+        <b-navbar toggleable="lg" type="dark" variant="dark">
           <b-navbar-brand href="#"
             ><router-link
               to="/"
@@ -186,7 +186,7 @@ export default {
   background-attachment: fixed;
 }
 .router-link-exact-active {
-  color: black !important;
+  color: #deca1f !important;
   cursor: pointer;
 }
 /* ANIMATION ROUTER-LINK*/

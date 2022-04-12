@@ -1,16 +1,18 @@
 <template>
   <div>
     <div>
-      <div class="bg-dark text-white">
+      <div class="text-white" style="background-color: rgba(0, 0, 0, 0.7)">
         <h1 class="pt-5">Contactez moi</h1>
-        <p></p>
+
         <div
           class="container container-img-social d-flex row justify-content-between mx-auto pb-5 mt-5"
         >
-          <div class="w-100 d-flex row align-items-center mb-5">
+          <div class="d-flex row align-items-center mb-5">
             <div class="mb-5">
-              <a href="https://wa.me/23057184367" target="_blank"
-                ><i class="fa-brands fa-whatsapp-square ms-2 me-2 fs-1"></i
+              <a
+                class="fa-brands fa fa-whatsapp text-decoration-none"
+                href="https://wa.me/23057184367"
+                target="_blank"
               ></a>
               <p>Contacter moi par Whatsapp</p>
             </div>

@@ -9,6 +9,6 @@ export default {};
 <style>
 .footer {
   height: 200px;
-  background-color: blueviolet;
+  background-color: #844c98;
 }
 </style>
