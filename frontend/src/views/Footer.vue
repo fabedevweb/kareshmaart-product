@@ -36,7 +36,7 @@ export default {};
 
 <style>
 .footer {
-  height: 200px;
+  height: 100px;
   background-color: #844c98;
 }
 </style>

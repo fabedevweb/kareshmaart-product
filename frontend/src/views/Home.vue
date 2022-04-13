@@ -67,6 +67,7 @@ h2 {
   background-attachment: fixed;
   position: absolute;
   top: 0px;
+  background-position: bottom;
 }
 .navigation-name__img {
   width: 60%;

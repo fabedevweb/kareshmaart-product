@@ -6,6 +6,7 @@
         src="../assets/blog.webp"
         style="width: 100%"
         alt=""
+        id="Blog"
       />
     </div>
     <div
@@ -54,9 +55,9 @@
       </div>
     </div>
     <div id="scroll_to_top">
-      <a href="#Realisations" style="font-size: 1.4rem; color: #deca1f">
+      <a href="#Blog" style="font-size: 1.4rem; color: #deca1f">
         <b-icon
-          icon="circle-fill"
+          icon="brush-fill"
           animation="cylon-vertical"
           font-scale="2"
         ></b-icon

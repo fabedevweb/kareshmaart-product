@@ -102,7 +102,7 @@
     <div id="scroll_to_top">
       <a href="#Moi" style="font-size: 1.4rem; color: #deca1f">
         <b-icon
-          icon="circle-fill"
+          icon="brush-fill"
           animation="cylon-vertical"
           font-scale="2"
         ></b-icon
