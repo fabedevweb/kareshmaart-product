@@ -8,7 +8,7 @@
           class="container-mentions text-decoration-none text-white fs-5 mt-5"
           to="/cgu"
         >
-          KareshmaArt - 2022 | Site réalisé par Fabrice Avrila |
+          © 2022 KareshmaArt | Site réalisé par Fabrice Avrila |
           <span>
             <router-link
               class="container-mentions text-decoration-none text-white fs-5"

@@ -99,7 +99,6 @@
         </div>
       </nav>
     </div>
-
     <router-view></router-view>
     <Footer></Footer>
   </div>
