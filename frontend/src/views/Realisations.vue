@@ -53,7 +53,7 @@
       <div id="scroll_to_top">
         <a href="#Realisations" style="font-size: 1.4rem; color: #deca1f">
           <b-icon
-            icon="circle-fill"
+            icon="brush-fill"
             animation="cylon-vertical"
             font-scale="2"
           ></b-icon
@@ -189,8 +189,8 @@ export default {
   position: fixed;
   width: 25px;
   height: 25px;
-  bottom: 85px;
-  right: 71px;
+  bottom: 300px;
+  right: 20%;
 }
 #scroll_to_top img {
   width: 10px;

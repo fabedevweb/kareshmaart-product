@@ -11,6 +11,8 @@ import SetMyBlog from "../views/SetMyBlog.vue";
 import Realisations from "../views/Realisations.vue";
 import YourInspiration from "../views/YourInspiration.vue";
 import MyInspiration from "../views/MyInspiration.vue";
+import Mentions from "../views/Mentions.vue";
+import Cgu from "../views/Cgu.vue";
 Vue.use(VueRouter);
 
 const routes = [
@@ -113,6 +115,16 @@ const routes = [
     path: "/setMyBlog",
     name: "SetMyBlog",
     component: SetMyBlog,
+  },
+  {
+    path: "/mentions",
+    name: "Mentions",
+    component: Mentions,
+  },
+  {
+    path: "/cgu",
+    name: "Cgu",
+    component: Cgu,
   },
 ];
 

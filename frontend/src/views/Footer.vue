@@ -1,5 +1,33 @@
 <template>
-  <div class="footer"></div>
+  <div class="footer">
+    <div class="container d-flex align-items-center h-100">
+      <div
+        class="container d-flex h-100 align-items-start justify-content-center flex-column"
+      >
+        <div
+          class="container-mentions text-decoration-none text-white fs-5 mt-5"
+          to="/cgu"
+        >
+          KareshmaArt - 2022 | Site réalisé par Fabrice Avrila |
+          <span>
+            <router-link
+              class="container-mentions text-decoration-none text-white fs-5"
+              to="/mentions"
+            >
+              Mentions légales |
+            </router-link></span
+          ><span>
+            <router-link
+              class="container-mentions text-decoration-none text-white fs-5"
+              to="/cgu"
+            >
+              Conditions générales d'utilisation
+            </router-link></span
+          >
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
