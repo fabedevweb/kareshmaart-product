@@ -23,7 +23,7 @@
                 <b-nav-item href="#" class="d-flex mx-auto align-items-center"
                   ><router-link
                     to="/"
-                    class="nav-link active mx-auto jello-horizontal"
+                    class="nav-link active mx-auto jello-horizontal w-100"
                     aria-current="page"
                     href="#"
                     ><i class="fa-solid fa-house"></i>ACCUEIL</router-link
@@ -31,8 +31,8 @@
                 >
                 <b-nav-item href="#" class="d-flex mx-auto align-items-center"
                   ><router-link
-                    to="/realisations"
-                    class="nav-link active mx-auto"
+                    to="/Tableaux"
+                    class="nav-link active mx-auto w-100"
                     aria-current="page"
                     href="#"
                   >
@@ -42,7 +42,7 @@
                 <b-nav-item href="#" class="d-flex mx-auto align-items-center"
                   ><router-link
                     to="/blog"
-                    class="nav-link active mx-auto"
+                    class="nav-link active mx-auto w-100"
                     aria-current="page"
                     href="#"
                     ><i class="fa-solid fa-newspaper"></i> BLOG</router-link
@@ -51,7 +51,7 @@
                 <b-nav-item href="#" class="d-flex mx-auto align-items-center"
                   ><router-link
                     to="/moi"
-                    class="nav-link active mx-auto"
+                    class="nav-link active mx-auto w-100"
                     aria-current="page"
                     href="#"
                     ><i class="fa-solid fa-face-smile"></i> MOI</router-link
@@ -60,7 +60,7 @@
                 <b-nav-item href="#" class="d-flex mx-auto align-items-center"
                   ><router-link
                     to="/contact"
-                    class="nav-link active mx-auto"
+                    class="nav-link active mx-auto w-100"
                     aria-current="page"
                     href="#"
                     ><i class="fa-solid fa-address-card"></i>
@@ -162,8 +162,8 @@ export default {
   font-style: normal;
   color: black !important;
   font-size: 3rem;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin-top: 200px;
+  margin-bottom: 200px;
 }
 .fa-bars {
   color: #f0e91a;

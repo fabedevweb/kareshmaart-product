@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div id="Realisations">
+    <div id="Tableaux">
       <img
         class="container-tableauImg__img fade-in"
         src="../assets/tableau.webp"
@@ -13,7 +13,7 @@
     >
       <div class="your-headText" style="padding: 8rem 0 8rem 0">
         <h1 class="your-header text-white">Tableaux de Kareshma</h1>
-        <p class="your-para text-white fs-5">
+        <p class="your-para text-white fs-5 text-justify">
           J'ai toujours été passionné par la peinture, l'art et l'imagination.
           Transposer des éléments cachés et enfouis tout au fond de notre esprit
           sur une feuille blanche est tout de même un défis. Retrouvez
@@ -51,7 +51,7 @@
       </div>
 
       <div id="scroll_to_top">
-        <a href="#Realisations" style="font-size: 1.4rem; color: #deca1f">
+        <a href="#Tableaux" style="font-size: 1.4rem; color: #deca1f">
           <b-icon
             icon="brush-fill"
             animation="cylon-vertical"
@@ -82,8 +82,10 @@ export default {
   object-fit: contain;
   width: 100%;
 }
-
-.realisations {
+.text-justify {
+  text-align: justify;
+}
+.Tableaux {
   font-family: new-order, sans-serif;
   font-weight: 200;
   font-style: normal;

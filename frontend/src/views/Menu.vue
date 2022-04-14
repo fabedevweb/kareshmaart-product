@@ -23,12 +23,12 @@
               >Home</router-link
             >
             <router-link
-              to="/realisations"
+              to="/Tableaux"
               class="active mx-auto"
               aria-current="page"
               href="#"
             >
-              Réalisations
+              Tableaux
             </router-link>
             <router-link
               to="/blog"

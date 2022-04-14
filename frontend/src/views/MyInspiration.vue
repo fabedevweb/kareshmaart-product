@@ -1,8 +1,8 @@
 <template>
   <div>
-    <div class="your mx-auto bg-dark" style="padding: 5rem 5rem">
+    <div class="your mx-auto bg-dark" style="padding: 8rem 1rem 8rem 1rem">
       <h2 class="your-header text-white">Mes inspirations</h2>
-      <p class="text-white fs-5">
+      <p class="your-para text-white fs-5 text-justify">
         Retrouvez ici mes oeuvres, inspirées de tout ce que j'aime observer à
         l'île Maurice. Capter les instants de la vie, et les immortaliser sur
         une toile, voilà ce que je souhaite.

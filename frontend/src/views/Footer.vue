@@ -5,7 +5,7 @@
         class="container d-flex h-100 align-items-start justify-content-center flex-column"
       >
         <div
-          class="container-mentions text-decoration-none text-white fs-5 mt-5"
+          class="container-mentions text-decoration-none text-white fs-5 mt-2"
           to="/cgu"
         >
           © 2022 KareshmaArt | Site réalisé par Fabrice Avrila |

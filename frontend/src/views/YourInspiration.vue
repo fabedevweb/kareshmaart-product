@@ -1,8 +1,8 @@
 <template>
   <div>
-    <div class="your mx-auto bg-dark" style="padding: 5rem 5rem">
+    <div class="your mx-auto bg-dark" style="padding: 8rem 1rem 8rem 1rem">
       <h2 class="your-header text-white">Vos inspirations</h2>
-      <p class="text-white fs-5">
+      <p class="text-white fs-5 text-justify">
         Cretaines personnes ont eu l'idée de me demander des tableaux sur
         mesure. Par exemple, utiliser le modèle de la Joconde, mais avec leur
         propre visage.

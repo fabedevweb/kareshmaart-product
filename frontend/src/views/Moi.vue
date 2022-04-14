@@ -118,7 +118,7 @@ export default {
 </script>
 
 <style scoped>
-.realisations {
+.Tableaux {
   font-family: new-order, sans-serif;
   font-weight: 200;
   font-style: normal;

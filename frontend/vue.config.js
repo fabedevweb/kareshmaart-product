@@ -1,7 +1,7 @@
 module.exports = {
   productionSourceMap: false,
   devServer: {
-    proxy: "http://kareshmaart.com",
+    proxy: "https://kareshmaart.com",
   },
   devServer: {
     proxy: {

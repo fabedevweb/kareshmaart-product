@@ -8,7 +8,7 @@ import NewArticle from "../views/NewArticle.vue";
 import SetCanvasMe from "../views/SetCanvasMe.vue";
 import SetCanvasYour from "../views/SetCanvasYour.vue";
 import SetMyBlog from "../views/SetMyBlog.vue";
-import Realisations from "../views/Realisations.vue";
+import Tableaux from "../views/Tableaux.vue";
 import YourInspiration from "../views/YourInspiration.vue";
 import MyInspiration from "../views/MyInspiration.vue";
 import Mentions from "../views/Mentions.vue";
@@ -22,9 +22,9 @@ const routes = [
     component: Home,
   },
   {
-    path: "/realisations",
-    name: "Realisations",
-    component: Realisations,
+    path: "/Tableaux",
+    name: "Tableaux",
+    component: Tableaux,
     children: [
       {
         path: "/MyInspiration",
