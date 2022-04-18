@@ -51,13 +51,18 @@
       </div>
 
       <div id="scroll_to_top">
-        <a href="#Tableaux" style="font-size: 1.4rem; color: #deca1f">
+        <a
+          href="#Tableaux"
+          style="font-size: 1.4rem; color: #deca1f"
+          class="text-decoration-none"
+        >
           <b-icon
             icon="brush-fill"
             animation="cylon-vertical"
             font-scale="2"
           ></b-icon
-        ></a>
+          >TOP</a
+        >
       </div>
     </div>
     <my-inspiration id="MyInspiration"></my-inspiration>

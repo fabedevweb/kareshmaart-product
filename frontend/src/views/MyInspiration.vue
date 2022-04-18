@@ -18,9 +18,6 @@
           >
             <img :src="picture.picture" class="container__img" alt="" />
             <p class="container-picture text-dark w-100">
-              <span class="container-picture__name h4"
-                >"{{ picture.name }}"</span
-              ><br />
               <button
                 class="button-78"
                 role="button"
@@ -95,5 +92,8 @@ export default {
 <style>
 .container-bg {
   background-color: rgba(0, 0, 0, 0.5);
+}
+.image {
+  border-radius: 50px;
 }
 </style>

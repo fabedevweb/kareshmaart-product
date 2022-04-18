@@ -16,10 +16,13 @@
                 ><i class="fa-solid fa-house"></i></router-link
             ></b-navbar-brand>
 
-            <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+            <b-navbar-toggle
+              target="nav-collapse"
+              style="margin-right: 20px"
+            ></b-navbar-toggle>
 
             <b-collapse id="nav-collapse" is-nav>
-              <b-navbar-nav>
+              <b-navbar-nav class="flex-wrap">
                 <b-nav-item href="#" class="d-flex mx-auto align-items-center"
                   ><router-link
                     to="/"
@@ -67,26 +70,25 @@
                     CONTACT</router-link
                   ></b-nav-item
                 >
-                <b-nav-item href="#" class="d-flex mx-auto align-items-center"
-                  ><a
-                    class="fa-brands fa fa-facebook mx-auto"
-                    href="https://www.facebook.com/yashnajenna"
-                    target="_blank"
-                  ></a
+                <b-nav-item
+                  href="https://www.facebook.com/yashnajenna"
+                  target="_blank"
+                  class="d-flex mx-auto align-items-center social_width"
+                  ><a class="fa-brands fa fa-facebook mx-auto"></a
                 ></b-nav-item>
-                <b-nav-item href="#" class="d-flex mx-auto align-items-center">
-                  <a
-                    class="fa-brands fa fa-instagram mx-auto +"
-                    href="https://www.instagram.com/kareshma_noursai_art/"
-                    target="_blank"
-                  ></a
+                <b-nav-item
+                  href="https://www.instagram.com/kareshma_noursai_art/"
+                  target="_blank"
+                  class="d-flex mx-auto align-items-center social_width"
+                >
+                  <a class="fa-brands fa fa-instagram mx-auto +"></a
                 ></b-nav-item>
-                <b-nav-item href="#" class="d-flex mx-auto align-items-center">
-                  <a
-                    class="fa-brands fa fa-whatsapp mx-auto"
-                    href="https://wa.me/23057184367"
-                    target="_blank"
-                  ></a
+                <b-nav-item
+                  :href="`https://wa.me/23058488574?text=KARESHMAART%0ABonjour,%0AKARESHMAART :`"
+                  target="_blank"
+                  class="d-flex mx-auto align-items-center social_width"
+                >
+                  <a class="fa-brands fa fa-whatsapp mx-auto"></a
                 ></b-nav-item>
               </b-navbar-nav>
             </b-collapse>
@@ -181,7 +183,7 @@ export default {
   font-family: new-order, sans-serif;
   font-weight: 500;
   font-style: normal;
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: white !important;
   width: 160px;
   background-attachment: fixed;
@@ -272,7 +274,7 @@ export default {
 
 /*Réseaux sociaux*/
 .fa {
-  padding: 20px;
+  padding: 8px;
   font-size: 30px;
   text-align: center;
   text-decoration: none;
@@ -288,17 +290,21 @@ export default {
 .fa-facebook {
   background: #3b5998;
   color: white;
-  width: 70px;
+  width: 48px;
 }
 .fa-instagram {
   background: linear-gradient(#400080, transparent),
     linear-gradient(200deg, #d047d1, #ff0000, #ffff00);
   color: white;
-  width: 70px;
+  width: 48px;
 }
 .fa-whatsapp {
   background: #3ac371;
   color: white;
-  width: 70px;
+  width: 48px;
+}
+.social_width {
+  width: 64px;
+  margin-left: 300px;
 }
 </style>

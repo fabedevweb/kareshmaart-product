@@ -16,7 +16,7 @@
           ></b-icon>
           <a
             class="fa-brands fa fa-whatsapp"
-            :href="`https://wa.me/23058488574?text=KARESHMAART%0ABonjour,%0AJe suis intéressé par le tableau suivant%0ANom:${nameCanvas}%0APrix:${priceCanvas}MUR%0ADimensions:${descriptionCanvas}%0AVotre message :`"
+            :href="`https://wa.me/23058488574?text=KARESHMAART%0ABonjour,%0AJe suis intéressé par le tableau suivant%0ANom:${nameCanvas}%0APrix:${priceCanvas}MUR%0ADimensions:${descriptionCanvas}%0AQue souhaitez-vous savoir :`"
             target="_blank"
           ></a>
         </div>
@@ -45,6 +45,7 @@ export default {
 <style>
 .modale {
   z-index: 3;
+  border-radius: 50px;
 }
 .bloc-modale {
   font-family: new-order, sans-serif;
@@ -73,7 +74,7 @@ a {
   font-size: 3rem;
 }
 .modale-img {
-  width: 85%;
+  width: 65%;
   max-width: 600px;
   height: 100% !important;
 }

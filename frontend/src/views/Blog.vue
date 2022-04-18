@@ -14,7 +14,7 @@
       style="padding: 5rem 5rem; background-color: rgba(0, 0, 0, 0.5)"
     >
       <h1 class="your-header text-white">Blog KareshmaArt</h1>
-      <p class="text-white fs-5">
+      <p class="text-white fs-5 d-flex mx-auto">
         Retrouvez ici mes quelques apparitions en galerie et médias.
       </p>
     </div>
