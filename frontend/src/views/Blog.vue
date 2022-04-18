@@ -18,7 +18,7 @@
         Retrouvez ici mes quelques apparitions en galerie et médias.
       </p>
     </div>
-
+    <!--YO-->
     <div
       class="my-4 container-bg mt-5"
       :key="index"
