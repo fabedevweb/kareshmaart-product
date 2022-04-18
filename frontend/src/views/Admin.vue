@@ -62,7 +62,7 @@ export default {
     },
     login: function () {
       axios
-        .post(`http://kareshmaart.com/api/auth/login`, {
+        .post(`https://kareshmaart.com/api/auth/login`, {
           email: this.email,
           password: this.password,
         })

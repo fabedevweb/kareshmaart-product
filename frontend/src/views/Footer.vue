@@ -5,20 +5,20 @@
         class="container d-flex h-100 align-items-start justify-content-center flex-column"
       >
         <div
-          class="container-mentions text-decoration-none text-white fs-5 mt-2"
+          class="container-mentions text-decoration-none text-white fs-6 mt-2"
           to="/cgu"
         >
           © 2022 KareshmaArt | Site réalisé par Fabrice Avrila |
           <span>
             <router-link
-              class="container-mentions text-decoration-none text-white fs-5"
+              class="container-mentions text-decoration-none text-white fs-6"
               to="/mentions"
             >
               Mentions légales |
             </router-link></span
           ><span>
             <router-link
-              class="container-mentions text-decoration-none text-white fs-5"
+              class="container-mentions text-decoration-none text-white fs-6"
               to="/cgu"
             >
               Conditions générales d'utilisation
