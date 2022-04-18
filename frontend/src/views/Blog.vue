@@ -105,7 +105,7 @@ export default {
   background-color: rgba(0, 0, 0, 0.5);
 }
 .card-block {
-  width: 70%;
+  width: 98%;
 }
 .card-text::first-letter {
   font-size: 200%;
