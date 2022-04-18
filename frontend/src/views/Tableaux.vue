@@ -14,10 +14,10 @@
       <div class="your-headText" style="padding: 8rem 0 8rem 0">
         <h1 class="your-header text-white">Tableaux de Kareshma</h1>
         <p class="your-para text-white fs-5 text-justify">
-          J'ai toujours été passionné par la peinture, l'art et l'imagination.
+          J'ai toujours été passionnée par la peinture, l'art et l'imagination.
           Transposer des éléments cachés et enfouis tout au fond de notre esprit
-          sur une feuille blanche est tout de même un défis. Retrouvez
-          ci-dessous mes inspirations et vos inspirations.
+          sur une feuille blanche est tout de même un défi. Retrouvez ci-dessous
+          mes inspirations et vos inspirations.
         </p>
         <div
           class="container container-fontfamily d-flex flex-wrap justify-content-center"

@@ -4,8 +4,8 @@
       <h2 class="your-header text-white">Mes inspirations</h2>
       <p class="your-para text-white fs-5 text-justify">
         Retrouvez ici mes oeuvres, inspirées de tout ce que j'aime observer à
-        l'île Maurice. Capter les instants de la vie, et les immortaliser sur
-        une toile, voilà ce que je souhaite.
+        l'île Maurice. Capter les instants de la vie et les immortaliser sur une
+        toile, voilà ce que je souhaite.
       </p>
     </div>
     <div class="container container-bg">

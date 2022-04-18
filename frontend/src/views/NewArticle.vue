@@ -1,7 +1,14 @@
 <template>
   <div>
+    <div class="bg-dark pt-3 pb-3 mb-3">
+      <div class="container d-flex justify-content-between">
+        <button @click="returnPage()" class="btn btn-primary text-white">
+          Return
+        </button>
+        <h1 class="text-white">Article de blog</h1>
+      </div>
+    </div>
     <div class="newcanvas w-50 mx-auto">
-      <h1 class="text-dark">Article de blog</h1>
       <div class="row">
         <div class="col">
           <input
@@ -124,12 +131,15 @@ export default {
       fd.append("paragraphe1", this.paragraphe1);
       fd.append("paragraphe2", this.paragraphe2);
       fd.append("image", this.selectFile, this.selectFile.name);
-      axios.post(`http://kareshmaart.com/api/blog`, fd).then((res) => {
+      axios.post(`blog`, fd).then((res) => {
         console.log(res, "Nouvel article envoyé");
         alert("Ta photo a bien été enregistré");
         let route = this.$router.resolve({ path: "/" });
         window.open(route.href);
       });
+    },
+    returnPage() {
+      this.$router.push("/create");
     },
   },
 };

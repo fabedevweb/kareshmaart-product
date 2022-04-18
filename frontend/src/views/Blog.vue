@@ -15,9 +15,7 @@
     >
       <h1 class="your-header text-white">Blog KareshmaArt</h1>
       <p class="text-white fs-5">
-        Retrouvez ici mes oeuvres, inspirées de tout ce que j'aime observer à
-        l'île Maurice. Capter les instants de la vie, et les immortaliser sur
-        une toile, voilà ce que je souhaite.
+        Retrouvez ici mes quelques apparitions en galerie et médias.
       </p>
     </div>
 
