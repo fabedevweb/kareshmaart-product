@@ -8,7 +8,8 @@ import App from "./App.vue";
 import VueRouter from "vue-router";
 import router from "./router";
 import VueScrollFixedNavbar from "vue-scroll-fixed-navbar";
-
+import Meta from "vue-meta";
+Vue.use(Meta);
 Vue.use(VueScrollFixedNavbar);
 Vue.use(VueRouter);
 Vue.config.productionTip = false;

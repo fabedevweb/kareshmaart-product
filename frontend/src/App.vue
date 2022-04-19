@@ -138,6 +138,19 @@ export default {
       }
     },
   },
+  metaInfo() {
+    return {
+      title: "Accueil",
+      meta: [
+        {
+          vmid: "description",
+          name: "description",
+          content:
+            "J'aime peindre depuis mon enfance. C'est vers l'art que mon cœur setourne. A l'aide d'un pinceau, le remplir de couleurs pour peindre une toile est une belle sensation de liberté. Il n'y a pas de limites.",
+        },
+      ],
+    };
+  },
 };
 </script>
 
