@@ -7,6 +7,30 @@ const paths = [
     priority: 1.0,
     changefreq: "yearly",
   },
+  {
+    path: "/Tableaux",
+    lastmod: "2021-11-22",
+    priority: 1.0,
+    changefreq: "yearly",
+  },
+  {
+    path: "/blog",
+    lastmod: "2021-11-22",
+    priority: 1.0,
+    changefreq: "yearly",
+  },
+  {
+    path: "/moi",
+    lastmod: "2021-11-22",
+    priority: 1.0,
+    changefreq: "yearly",
+  },
+  {
+    path: "/contact",
+    lastmod: "2021-11-22",
+    priority: 1.0,
+    changefreq: "yearly",
+  },
 ];
 module.exports = {
   productionSourceMap: false,
