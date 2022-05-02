@@ -1,7 +1,7 @@
 import axios from "axios";
 
 let admin = localStorage.getItem("admin");
-axios.defaults.baseURL = "https://kareshmaart.com/api/";
+axios.defaults.baseURL = "https://kareshmaart.com";
 
 if (!admin) {
   admin = {
