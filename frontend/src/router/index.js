@@ -13,7 +13,7 @@ import YourInspiration from "../views/YourInspiration.vue";
 import MyInspiration from "../views/MyInspiration.vue";
 import Mentions from "../views/Mentions.vue";
 import Cgu from "../views/Cgu.vue";
-import { createRouter, createWebHistory } from "vue-router";
+//import { createRouter, createWebHistory } from "vue-router";
 Vue.use(VueRouter);
 
 const routes = [
@@ -129,9 +129,9 @@ const routes = [
   },
 ];
 
-const router = createRouter({
+const router = new VueRouter({
   base: process.env.BASE_URL,
-  history: createWebHistory(), // add this
+  //history: createWebHistory(), // add this
   routes,
 });
 
