@@ -48,10 +48,8 @@ module.exports = {
       },
     },
   },
-
   configureWebpack: {
     plugins: [new SitemapPlugin({ base: "https://kareshmaart.com", paths })],
   },
-
   outputDir: "../client-build",
 };

@@ -2,7 +2,6 @@ const express = require("express");
 const bodyParser = require("body-parser");
 // Path permet à l'API de savoir ou se trouve les images à récupérer
 const path = require("path");
-app.enable("trust proxy");
 // import employee route
 const userRoutes = require("./src/routes/user");
 const thingRoutesYour = require("./src/routes/thingYour");
@@ -34,10 +33,10 @@ app.use(bodyParser.json());
 app.use("/images", express.static(path.join(__dirname, "images")));
 
 app.use(express.static(path.join(__dirname, "../client-build")));
-app.get("https://kareshmaart.com", (req, res) => {
+app.get("https://kareshmaart.com/api/", (req, res) => {
   res.sendFile(path.join(__dirname, "../client-build/index.html"));
 });
-
+app.enable("trust proxy");
 app.use("/api/auth", userRoutes);
 app.use("/api/your/", thingRoutesYour);
 app.use("/api/me/", thingRoutesMe);
