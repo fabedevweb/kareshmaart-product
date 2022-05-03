@@ -39,9 +39,9 @@ app.get("https://kareshmaart.com/api/", (req, res) => {
 });
 app.enable("trust proxy");
 app.use("/api/auth", userRoutes);
-app.use("/api/your/", thingRoutesYour);
-app.use("/api/me/", thingRoutesMe);
-app.use("/api/blog/", thingRoutesBlog);
+app.use("/api/your", thingRoutesYour);
+app.use("/api/me", thingRoutesMe);
+app.use("/api/blog", thingRoutesBlog);
 // listen to the port
 app.listen(port, () => {
   console.log(`Express is running at port ${port}`);
