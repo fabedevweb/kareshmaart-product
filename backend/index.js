@@ -1,4 +1,5 @@
 const express = require("express");
+const history = require("connect-history-api-fallback");
 const bodyParser = require("body-parser");
 // Path permet à l'API de savoir ou se trouve les images à récupérer
 const path = require("path");
@@ -10,7 +11,7 @@ const thingRoutesMe = require("./src/routes/thingMe");
 const thingRoutesBlog = require("./src/routes/thingBlog");
 // create express app
 const app = express();
-
+app.use(history());
 // setup the server port
 const port = process.env.PORT || 3000;
 app.use((req, res, next) => {
