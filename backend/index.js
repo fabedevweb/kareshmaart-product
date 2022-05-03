@@ -1,6 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-const history = require("connect-history-api-fallback");
+//const history = require("connect-history-api-fallback");
 // Path permet à l'API de savoir ou se trouve les images à récupérer
 const path = require("path");
 // import employee route
@@ -28,7 +28,7 @@ app.use((req, res, next) => {
 
 // parse request data content type application/json
 app.use(bodyParser.json());
-app.use(history());
+//app.use(history());
 //Importer les images
 // Path permet à l'API de savoir ou se trouve les images à récupérer
 app.use("/images", express.static(path.join(__dirname, "images")));
