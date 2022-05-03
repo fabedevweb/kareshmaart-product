@@ -128,14 +128,16 @@ export default {
       fd.append("price", this.price);
       fd.append("description", this.description);
       fd.append("image", this.selectFile, this.selectFile.name);
-      axios.post(`https://kareshmaart.com/api/me`, fd).then((res) => {
-        console.log(res, "Nouveau canvas envoyé");
-        /*
-        alert("Ta photo a bien été enregistré");
-        let route = this.$router.resolve({ path: "/" });
-        window.open(route.href);
-        */
-      });
+      try {
+        axios.post(`me`, fd).then((res) => {
+          console.log(res, "Nouveau canvas envoyé");
+          alert("Ta photo a bien été enregistré");
+          let route = this.$router.resolve({ path: "/" });
+          window.open(route.href);
+        });
+      } catch (error) {
+        console.error(error.response.data);
+      }
     },
     returnPage() {
       this.$router.push("/create");
