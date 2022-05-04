@@ -1,6 +1,6 @@
 const SitemapPlugin = require("sitemap-webpack-plugin").default;
 // You can write the paths as an array of strings or an array of objects
-
+/*
 const paths = [
   {
     path: "/",
@@ -33,7 +33,7 @@ const paths = [
     changefreq: "yearly",
   },
 ];
-
+*/
 module.exports = {
   productionSourceMap: false,
   devServer: {
@@ -48,8 +48,10 @@ module.exports = {
       },
     },
   },
+  /*
   configureWebpack: {
     plugins: [new SitemapPlugin({ base: "https://kareshmaart.com", paths })],
   },
+  */
   outputDir: "../client-build",
 };
