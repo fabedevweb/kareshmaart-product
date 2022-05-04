@@ -37,7 +37,7 @@ const paths = [
 module.exports = {
   productionSourceMap: false,
   devServer: {
-    proxy: "https://kareshmaart.com",
+    proxy: "https://kareshmaart.com/api/",
   },
   devServer: {
     proxy: {
