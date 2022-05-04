@@ -46,5 +46,4 @@ app.use("/api/blog", thingRoutesBlog);
 app.listen(port, () => {
   console.log(`Express is running at port ${port}`);
 });
-
 module.exports = app;
