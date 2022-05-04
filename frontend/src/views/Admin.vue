@@ -44,7 +44,7 @@
 import axios from "axios";
 export default {
   name: "Login",
-  data: function () {
+  data: function() {
     return {
       mode: "login",
       email: null,
@@ -57,10 +57,10 @@ export default {
     };
   },
   methods: {
-    showLogin: function () {
+    showLogin: function() {
       this.mode = "login";
     },
-    login: function () {
+    login: function() {
       axios
         .post(`https://kareshmaart.com/api/auth/login`, {
           email: this.email,
@@ -75,7 +75,7 @@ export default {
           this.emailError = "Email ou mot de passe incorrect";
         });
     },
-    validEmail: function (email) {
+    validEmail: function(email) {
       var re = /^[a-zA-Z0-9.!#$%&'*+/=?^_]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)$/;
       return re.test(email);
     },
@@ -84,6 +84,7 @@ export default {
 </script>
 
 <style scoped>
+/*New*/
 .background {
   font-family: new-order, sans-serif;
   font-weight: 900;
