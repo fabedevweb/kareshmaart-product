@@ -5,7 +5,7 @@
         <button @click="returnPage()" class="btn btn-primary text-white">
           Return
         </button>
-        <h1 class="text-white mb-4">Nouveau tableau inspiré par moi</h1>
+        <h1 class="text-white mb-4">Nouveau tableau inspiré par eux</h1>
       </div>
     </div>
     <div class="newcanvas w-50 mx-auto">
@@ -128,7 +128,7 @@ export default {
       fd.append("price", this.price);
       fd.append("description", this.description);
       fd.append("image", this.selectFile, this.selectFile.name);
-      axios.post(`me`, fd).then((res) => {
+      axios.post(`your`, fd).then((res) => {
         console.log(res, "Nouveau canvas envoyé");
         alert("Ta photo a bien été enregistré");
         let route = this.$router.resolve({ path: "/" });
@@ -142,7 +142,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .test {
   width: 90%;
 }

@@ -25,7 +25,22 @@
 </template>
 
 <script>
-export default {};
+export default {
+  metaInfo: {
+    title: "Accueil",
+    meta: [
+      { charset: "utf-8" },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      {
+        name: "description",
+        content: `J'aime peindre depuis mon enfance. C'est vers l'art que mon cœur se
+        tourne. A l'aide d'un pinceau, le remplir de couleurs pour peindre une
+        toile est une belle sensation de liberté. Il n'y a pas de
+        limites.`,
+      },
+    ],
+  },
+};
 </script>
 
 <style scoped>
