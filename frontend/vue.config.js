@@ -39,6 +39,7 @@ module.exports = {
   devServer: {
     proxy: "https://kareshmaart.com/api/",
   },
+  /*
   devServer: {
     proxy: {
       "^/api": {
@@ -48,6 +49,7 @@ module.exports = {
       },
     },
   },
+  */
   /*
   configureWebpack: {
     plugins: [new SitemapPlugin({ base: "https://kareshmaart.com", paths })],
