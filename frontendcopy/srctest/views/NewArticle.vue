@@ -1,31 +1,15 @@
 <template>
   <div>
-    <div class="bg-dark pt-3 pb-3 mb-3">
-      <div class="container d-flex justify-content-between">
-        <button @click="returnPage()" class="btn btn-primary text-white">
-          Return
-        </button>
-        <h1 class="text-white mb-4">Nouveau tableau inspiré par moi</h1>
-      </div>
-    </div>
     <div class="newcanvas w-50 mx-auto">
+      <h1 class="text-dark">Article de blog</h1>
       <div class="row">
         <div class="col">
           <input
-            v-model="name"
+            v-model="title"
             type="text"
             class="form-control"
-            placeholder="Canvas Name"
-            aria-label="Name"
-          />
-        </div>
-        <div class="col">
-          <input
-            v-model="price"
-            type="text"
-            class="form-control"
-            placeholder="Canvas Price"
-            aria-label="Price"
+            placeholder="Title"
+            aria-label="Title"
           />
         </div>
       </div>
@@ -33,13 +17,26 @@
       <div class="form-group w-100 mb-5 mt-5">
         <label for="exampleFormControlTextarea1"></label>
         <textarea
-          v-model="description"
+          v-model="paragraphe1"
           class="form-control"
           id="exampleFormControlTextarea1"
           rows="10"
-          placeholder="Canvas description"
+          placeholder="Paragraphe 1"
         ></textarea>
+        <br /><br />
       </div>
+      <div class="form-group w-100 mb-5 mt-5">
+        <label for="exampleFormControlTextarea2"></label>
+        <textarea
+          v-model="paragraphe2"
+          class="form-control"
+          id="exampleFormControlTextarea2"
+          rows="10"
+          placeholder="Paragraphe 2"
+        ></textarea>
+        <br /><br />
+      </div>
+
       <!-- IMAGE -->
       <div class="container newcanvas-image">
         <div class="row">
@@ -47,7 +44,7 @@
             <form>
               <div class="form-group pt-5">
                 <label for="my-file"
-                  ><strong>Sélectionne l'image de ton tableau</strong>
+                  ><strong>Sélectionne l'image de ton article</strong>
                 </label>
                 <input
                   type="file"
@@ -85,7 +82,6 @@
 </template>
 
 <script>
-//const axios = require("axios");
 import axios from "../axios.js";
 export default {
   data() {
@@ -96,11 +92,11 @@ export default {
       preview: null,
       image: null,
       preview_list: [],
-      price: null,
-      description: null,
+      title: null,
+      paragraphe1: null,
+      paragraphe2: null,
     };
   },
-
   methods: {
     previewImage: function (event) {
       var input = event.target;
@@ -124,23 +120,16 @@ export default {
 
     createPosts: function () {
       const fd = new FormData();
-      fd.append("name", this.name);
-      fd.append("price", this.price);
-      fd.append("description", this.description);
+      fd.append("title", this.title);
+      fd.append("paragraphe1", this.paragraphe1);
+      fd.append("paragraphe2", this.paragraphe2);
       fd.append("image", this.selectFile, this.selectFile.name);
-      try {
-        axios.post(`me`, fd).then((res) => {
-          console.log(res, "Nouveau canvas envoyé");
-          alert("Ta photo a bien été enregistré");
-          let route = this.$router.resolve({ path: "/" });
-          window.open(route.href);
-        });
-      } catch (error) {
-        console.error(error.response.data);
-      }
-    },
-    returnPage() {
-      this.$router.push("/create");
+      axios.post(`blog`, fd).then((res) => {
+        console.log(res, "Nouvel article envoyé");
+        alert("Ta photo a bien été enregistré");
+        let route = this.$router.resolve({ path: "/" });
+        window.open(route.href);
+      });
     },
   },
 };

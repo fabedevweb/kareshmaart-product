@@ -1,6 +1,6 @@
 <template>
   <div id="create">
-    <div class="Tableaux pt-5" v-if="adminConnected()">
+    <div class="realisations pt-5" v-if="adminConnected()">
       <h1 class="mb-5">ADMINISTRATION</h1>
       <button type="button" class="btn btn-light" @click="adminDisconnected()">
         Déconnection
@@ -87,7 +87,7 @@ export default {
 </script>
 
 <style>
-.Tableaux {
+.realisations {
   font-family: new-order, sans-serif;
   font-weight: 200;
   font-style: normal;

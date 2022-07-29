@@ -1,9 +1,23 @@
 <template>
-  <div>
+  <div
+    class="background"
+    :style="{
+      backgroundImage: 'url(' + require('/src/assets/commander.jpeg') + ')',
+    }"
+  >
     <div class="background-card">
-      <h1 class="card__title text-white" v-if="mode == 'login'">Connexion</h1>
-      <p class="text-white bg-danger">{{ emailError }}</p>
+      <h1 class="card__title" v-if="mode == 'login'">Créer un admin</h1>
       <div class="card mt-5 mx-auto border-0">
+        <div class="form-row">
+          <input
+            v-model="pseudo"
+            class="form-row__input"
+            type="text"
+            name="pseudo"
+            placeholder="Votre Pseudo"
+            aria-label="Veuillez renseigner votre pseudo"
+          />
+        </div>
         <div class="form-row">
           <input
             v-model="email"
@@ -25,13 +39,13 @@
         </div>
         <div class="form-row d-grid gap-2 col-9 mx-auto">
           <button
-            @click="login()"
+            @click="signup()"
             class="btn btn-success"
             type="button"
             v-if="mode == 'login'"
             aria-label="Cliquez ici pour vous connecter"
           >
-            <span>Connexion</span>
+            <span>Création du compte</span>
           </button>
           <!-- <span v-if="status == 'loading'">Connexion en cours...</span>-->
         </div>
@@ -43,36 +57,43 @@
 <script>
 import axios from "axios";
 export default {
-  name: "Login",
+  name: "Signup",
   data: function () {
     return {
       mode: "login",
       email: null,
+      pseudo: null,
       password: null,
       pseudoForm: "",
       emailForm: "",
       passwordForm: "",
       emailRegex: "",
-      emailError: "",
     };
+  },
+
+  computed: {
+    validatedFields: function () {
+      if (this.pseudo != "" && this.email != "" && this.password != "") {
+        return true;
+      } else {
+        return false;
+      }
+    },
   },
   methods: {
     showLogin: function () {
       this.mode = "login";
     },
-    login: function () {
+    signup: function () {
       axios
-        .post(`https://www.kareshmaart.com/auth/login`, {
+        .post(`http://localhost:3000/api/auth/signup`, {
+          pseudo: this.pseudo,
           email: this.email,
           password: this.password,
         })
         .then((res) => {
-          console.log(res.data, "Connecté");
-          localStorage.setItem("admin", JSON.stringify(res.data));
-          this.$router.push("/Create");
-        })
-        .catch(() => {
-          this.emailError = "Email ou mot de passe incorrect";
+          console.log(res, "Admin créé");
+          this.$router.push("/admin");
         });
     },
     validEmail: function (email) {
@@ -84,7 +105,6 @@ export default {
 </script>
 
 <style scoped>
-/*New*/
 .background {
   font-family: new-order, sans-serif;
   font-weight: 900;

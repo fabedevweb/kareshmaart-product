@@ -1,90 +1,106 @@
 <template>
   <div id="app">
-    <nav
-      class="navbar pb-0 navbar-expand-lg navbar-light transparent"
-      v-if="hideMenu()"
-    >
-      <div class="container-fluid flex-column w-100 mt-5">
-        <div>
-          <p class="navigation-name-p">KareshmaArt</p>
-        </div>
-        <div
-          class="container-img-social d-flex justify-content-between mx-auto mb-5"
-        >
-          <a href="https://www.facebook.com/yashnajenna" target="_blank"
-            ><i class="fa-brands fa-facebook-square me-2"></i
-          ></a>
-          <a
-            href="https://www.instagram.com/kareshma_noursai_art/"
-            target="_blank"
-            ><i class="fa-brands fa-instagram-square ms-2 me-2"></i
-          ></a>
-          <a href="https://wa.me/23057184367" target="_blank"
-            ><i class="fa-brands fa-whatsapp-square ms-2 me-2"></i
-          ></a>
-        </div>
-      </div>
-    </nav>
-    <VueScrollFixedNavbar v-if="hideMenu()">
-      <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container-fluid">
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <i class="fa-solid fa-bars"></i>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <div
-              class="navbar-nav d-flex justify-content-between mx-auto"
-              style="background-color: rgba(0, 0, 0, 0.5)"
-            >
-              <router-link
+    <div style="background-color: rgba(255, 255, 255, 0.5)">
+      <nav
+        class="navbar-expand-lg navbar-light transparent d-flex flex-column"
+        v-if="hideMenu()"
+      >
+        <VueScrollFixedNavbar>
+          <b-navbar toggleable="lg" type="dark" variant="dark">
+            <b-navbar-brand href="#"
+              ><router-link
                 to="/"
                 class="nav-link active mx-auto jello-horizontal"
                 aria-current="page"
                 href="#"
-                ><i class="fa-solid fa-house"></i> ACCUEIL</router-link
-              >
-              <router-link
-                to="/realisations"
-                class="nav-link active mx-auto"
-                aria-current="page"
-                href="#"
-              >
-                <i class="fa-solid fa-palette"></i> TABLEAUX
-              </router-link>
-              <router-link
-                to="/blog"
-                class="nav-link active mx-auto"
-                aria-current="page"
-                href="#"
-                ><i class="fa-solid fa-newspaper"></i> BLOG</router-link
-              >
-              <router-link
-                to="/moi"
-                class="nav-link active mx-auto"
-                aria-current="page"
-                href="#"
-                ><i class="fa-solid fa-face-smile"></i> MOI</router-link
-              >
-              <router-link
-                to="/contact"
-                class="nav-link active mx-auto"
-                aria-current="page"
-                href="#"
-                ><i class="fa-solid fa-address-card"></i> CONTACT</router-link
-              >
-            </div>
+                ><i class="fa-solid fa-house"></i></router-link
+            ></b-navbar-brand>
+
+            <b-navbar-toggle
+              target="nav-collapse"
+              style="margin-right: 20px"
+            ></b-navbar-toggle>
+
+            <b-collapse id="nav-collapse" is-nav>
+              <b-navbar-nav class="flex-wrap">
+                <b-nav-item href="#" class="d-flex mx-auto align-items-center"
+                  ><router-link
+                    to="/"
+                    class="nav-link active mx-auto jello-horizontal w-100"
+                    aria-current="page"
+                    href="#"
+                    ><i class="fa-solid fa-house"></i>ACCUEIL</router-link
+                  ></b-nav-item
+                >
+                <b-nav-item href="#" class="d-flex mx-auto align-items-center"
+                  ><router-link
+                    to="/Tableaux"
+                    class="nav-link active mx-auto w-100"
+                    aria-current="page"
+                    href="#"
+                  >
+                    <i class="fa-solid fa-palette"></i> TABLEAUX
+                  </router-link></b-nav-item
+                >
+                <b-nav-item href="#" class="d-flex mx-auto align-items-center"
+                  ><router-link
+                    to="/blog"
+                    class="nav-link active mx-auto w-100"
+                    aria-current="page"
+                    href="#"
+                    ><i class="fa-solid fa-newspaper"></i> BLOG</router-link
+                  ></b-nav-item
+                >
+                <b-nav-item href="#" class="d-flex mx-auto align-items-center"
+                  ><router-link
+                    to="/moi"
+                    class="nav-link active mx-auto w-100"
+                    aria-current="page"
+                    href="#"
+                    ><i class="fa-solid fa-face-smile"></i> MOI</router-link
+                  ></b-nav-item
+                >
+                <b-nav-item href="#" class="d-flex mx-auto align-items-center"
+                  ><router-link
+                    to="/contact"
+                    class="nav-link active mx-auto w-100"
+                    aria-current="page"
+                    href="#"
+                    ><i class="fa-solid fa-address-card"></i>
+                    CONTACT</router-link
+                  ></b-nav-item
+                >
+                <b-nav-item
+                  href="https://www.facebook.com/yashnajenna"
+                  target="_blank"
+                  class="d-flex mx-auto align-items-center social_width"
+                  ><a class="fa-brands fa fa-facebook mx-auto"></a
+                ></b-nav-item>
+                <b-nav-item
+                  href="https://www.instagram.com/kareshma_noursai_art/"
+                  target="_blank"
+                  class="d-flex mx-auto align-items-center social_width"
+                >
+                  <a class="fa-brands fa fa-instagram mx-auto +"></a
+                ></b-nav-item>
+                <b-nav-item
+                  :href="`https://wa.me/23058488574?text=KARESHMAART%0ABonjour,%0AKARESHMAART :`"
+                  target="_blank"
+                  class="d-flex mx-auto align-items-center social_width"
+                >
+                  <a class="fa-brands fa fa-whatsapp mx-auto"></a
+                ></b-nav-item>
+              </b-navbar-nav>
+            </b-collapse>
+          </b-navbar>
+        </VueScrollFixedNavbar>
+        <div class="container-fluid">
+          <div class="w-100">
+            <p class="navigation-name-p">KareshmaArt</p>
           </div>
         </div>
       </nav>
-    </VueScrollFixedNavbar>
+    </div>
     <router-view></router-view>
     <Footer></Footer>
   </div>
@@ -97,6 +113,11 @@ export default {
   components: {
     Footer,
     VueScrollFixedNavbar,
+  },
+  data() {
+    return {
+      open: null,
+    };
   },
   methods: {
     hideMenu() {
@@ -143,10 +164,8 @@ export default {
   font-style: normal;
   color: black !important;
   font-size: 3rem;
-  margin-top: 300px;
-  text-shadow: 0 -4px 0 black, 0 3px 0 black;
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
+  margin-top: 200px;
+  margin-bottom: 200px;
 }
 .fa-bars {
   color: #f0e91a;
@@ -164,16 +183,14 @@ export default {
   font-family: new-order, sans-serif;
   font-weight: 500;
   font-style: normal;
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: white !important;
   width: 160px;
   background-attachment: fixed;
 }
 .router-link-exact-active {
-  border-bottom: 2px solid yellow;
-  color: yellow !important;
+  color: #deca1f !important;
   cursor: pointer;
-  width: 200px;
 }
 /* ANIMATION ROUTER-LINK*/
 
@@ -181,7 +198,6 @@ export default {
 .fa-brands:hover {
   -webkit-animation: jello-horizontal 0.9s both;
   animation: jello-horizontal 0.9s both;
-  color: #f0e91a;
 }
 /* ----------------------------------------------
  * Generated by Animista on 2022-3-20 10:0:52
@@ -257,14 +273,38 @@ export default {
 }
 
 /*Réseaux sociaux*/
-.fa-brands {
-  color: #f0e91a;
-  cursor: pointer;
-  font-size: 4rem;
+.fa {
+  padding: 8px;
+  font-size: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 10px;
+  border-radius: 50%;
 }
 
 .container-img-social_item:hover {
   -webkit-animation: wobble-hor-bottom 0.8s both;
   animation: wobble-hor-bottom 0.8s both;
+}
+/* Facebook */
+.fa-facebook {
+  background: #3b5998;
+  color: white;
+  width: 48px;
+}
+.fa-instagram {
+  background: linear-gradient(#400080, transparent),
+    linear-gradient(200deg, #d047d1, #ff0000, #ffff00);
+  color: white;
+  width: 48px;
+}
+.fa-whatsapp {
+  background: #3ac371;
+  color: white;
+  width: 48px;
+}
+.social_width {
+  width: 64px;
+  margin-left: 300px;
 }
 </style>

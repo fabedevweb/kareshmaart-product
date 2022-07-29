@@ -1,13 +1,5 @@
 <template>
   <div>
-    <div class="bg-dark pt-3 pb-3 mb-3">
-      <div class="container d-flex justify-content-between">
-        <button @click="returnPage()" class="btn btn-primary text-white">
-          Return
-        </button>
-        <h1 class="text-white">Mes tableaux</h1>
-      </div>
-    </div>
     <div
       class="card mb-3"
       :key="index"
@@ -44,15 +36,12 @@ export default {
       picture: [],
       pictures: [],
       name: null,
-      price: null,
-      description: null,
-      revele: false,
       imageCanvas: null,
     };
   },
   mounted: function () {
     axios
-      .get(`/your`)
+      .get(`http://localhost:3000/api/blog`)
       .then((res) => {
         this.pictures = res.data;
         console.log(this.pictures);
@@ -69,33 +58,21 @@ export default {
     nameP(picture) {
       console.log(picture.name);
     },
-    toggleModale(picture) {
-      this.revele = !this.revele;
-      this.imageCanvas = picture.picture;
-      this.name = picture.name;
-      this.price = picture.price;
-      this.description = picture.description;
-      console.log(picture.picture);
-    },
     deleteCanvas(picture) {
       if (confirm("Es-tu sûr de vouloire supprimer ce tableau ?")) {
         axios
-          .delete(`/your/${picture.id}}`)
+          .delete(`http://localhost:3000/api/blog/${picture.id}}`)
           .then((res) => {
             this.pictures = res.data;
-            location.reload();
-            this.$router.push("/SetCanvasYour");
+            this.$router.push("Create");
           })
           .catch(function (error) {
             // handle error
             console.log(error);
           });
       } else {
-        this.$router.push("SetCanvasYour");
+        this.$router.push("SetMyBlog");
       }
-    },
-    returnPage() {
-      this.$router.push("/create");
     },
   },
 };

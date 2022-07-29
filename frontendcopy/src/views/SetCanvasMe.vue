@@ -1,5 +1,13 @@
 <template>
   <div>
+    <div class="bg-dark pt-3 pb-3 mb-3">
+      <div class="container d-flex justify-content-between">
+        <button @click="returnPage()" class="btn btn-primary text-white">
+          Return
+        </button>
+        <h1 class="text-white">Mes tableaux</h1>
+      </div>
+    </div>
     <div
       class="card mb-3"
       :key="index"
@@ -44,7 +52,7 @@ export default {
   },
   mounted: function () {
     axios
-      .get(`http://localhost:3000/api/me`)
+      .get(`/me`)
       .then((res) => {
         this.pictures = res.data;
         console.log(this.pictures);
@@ -71,23 +79,23 @@ export default {
     },
     deleteCanvas(picture) {
       if (confirm("Es-tu sûr de vouloire supprimer ce tableau ?")) {
-        alert("oui");
         axios
-          .delete(`http://localhost:3000/api/me/${picture.id}}`)
+          .delete(`/me/${picture.id}}`)
           .then((res) => {
             this.pictures = res.data;
-            console.log(this.pictures);
+            location.reload();
+            this.$router.push("/SetCanvasMe");
           })
           .catch(function (error) {
             // handle error
             console.log(error);
-          })
-          .then(function () {
-            // always executed
           });
       } else {
         this.$router.push("SetCanvasMe");
       }
+    },
+    returnPage() {
+      this.$router.push("/create");
     },
   },
 };

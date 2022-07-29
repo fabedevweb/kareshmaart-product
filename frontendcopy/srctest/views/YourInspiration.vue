@@ -1,9 +1,9 @@
 <template>
   <div>
-    <div class="your mx-auto bg-dark" style="padding: 8rem 1rem 8rem 1rem">
+    <div class="your mx-auto bg-dark" style="padding: 5rem 5rem">
       <h2 class="your-header text-white">Vos inspirations</h2>
-      <p class="text-white fs-5 text-justify">
-        Certaines personnes ont eu l'idée de me demander des tableaux sur
+      <p class="text-white fs-5">
+        Cretaines personnes ont eu l'idée de me demander des tableaux sur
         mesure. Par exemple, utiliser le modèle de la Joconde, mais avec leur
         propre visage.
       </p>
@@ -141,8 +141,8 @@ body {
   left: 50%;
   width: 200px;
   height: 200px;
-  transform: translate(-200%, -50%);
-  background-color: #deca1f;
+  transform: translate(-140%, -50%);
+  background-color: yellow;
   opacity: 0.8;
   border-radius: 50%;
   transition: 0.2s;
