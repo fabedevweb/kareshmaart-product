@@ -3,7 +3,7 @@
 module.exports = {
   productionSourceMap: false,
   devServer: {
-    proxy: "https://www.kareshmaart.com/api/",
+    proxy: "http://www.kareshmaart.com/api/",
   },
   outputDir: "../client-build",
 };
