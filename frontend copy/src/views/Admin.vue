@@ -31,7 +31,7 @@
             v-if="mode == 'login'"
             aria-label="Cliquez ici pour vous connecter"
           >
-            <span>Connexion</span>
+            <span>Connexion Copy</span>
           </button>
           <!-- <span v-if="status == 'loading'">Connexion en cours...</span>-->
         </div>
@@ -62,7 +62,7 @@ export default {
     },
     login: function () {
       axios
-        .post(`http://localhost:3000/api/auth/login`, {
+        .post(`auth/login`, {
           email: this.email,
           password: this.password,
         })
