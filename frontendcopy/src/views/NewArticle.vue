@@ -1,14 +1,7 @@
 <template>
   <div>
-    <div class="bg-dark pt-3 pb-3 mb-3">
-      <div class="container d-flex justify-content-between">
-        <button @click="returnPage()" class="btn btn-primary text-white">
-          Return
-        </button>
-        <h1 class="text-white">Article de blog</h1>
-      </div>
-    </div>
     <div class="newcanvas w-50 mx-auto">
+      <h1 class="text-dark">Article de blog</h1>
       <div class="row">
         <div class="col">
           <input
@@ -137,9 +130,6 @@ export default {
         let route = this.$router.resolve({ path: "/" });
         window.open(route.href);
       });
-    },
-    returnPage() {
-      this.$router.push("/create");
     },
   },
 };

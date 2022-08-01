@@ -14,7 +14,7 @@
         <div class="wrap navigation-enter mt-5">
           <router-link
             class="button text-decoration-none navigation-enter"
-            to="/Tableaux"
+            to="/realisations"
           >
             Bienvenue sur mon site
           </router-link>
@@ -25,22 +25,7 @@
 </template>
 
 <script>
-export default {
-  metaInfo: {
-    title: "Accueil",
-    meta: [
-      { charset: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      {
-        name: "description",
-        content: `J'aime peindre depuis mon enfance. C'est vers l'art que mon cœur se
-        tourne. A l'aide d'un pinceau, le remplir de couleurs pour peindre une
-        toile est une belle sensation de liberté. Il n'y a pas de
-        limites.`,
-      },
-    ],
-  },
-};
+export default {};
 </script>
 
 <style scoped>
@@ -54,7 +39,7 @@ export default {
   font-weight: 900;
   font-style: normal;
   color: black !important;
-  font-size: 3rem;
+  font-size: 4rem;
 }
 .navigation-name {
   font-family: new-order, sans-serif;
@@ -82,7 +67,6 @@ h2 {
   background-attachment: fixed;
   position: absolute;
   top: 0px;
-  background-position: bottom;
 }
 .navigation-name__img {
   width: 60%;

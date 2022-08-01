@@ -86,7 +86,7 @@ export default {
     },
     signup: function () {
       axios
-        .post(`/auth/signup`, {
+        .post(`http://localhost:3000/api/auth/signup`, {
           pseudo: this.pseudo,
           email: this.email,
           password: this.password,

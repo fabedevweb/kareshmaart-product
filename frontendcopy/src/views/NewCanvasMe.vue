@@ -1,14 +1,7 @@
 <template>
   <div>
-    <div class="bg-dark pt-3 pb-3 mb-3">
-      <div class="container d-flex justify-content-between">
-        <button @click="returnPage()" class="btn btn-primary text-white">
-          Return
-        </button>
-        <h1 class="text-white mb-4">Nouveau tableau inspiré par moi</h1>
-      </div>
-    </div>
     <div class="newcanvas w-50 mx-auto">
+      <h1 class="text-dark mb-4">Nouveau tableau inspiré par moi</h1>
       <div class="row">
         <div class="col">
           <input
@@ -128,19 +121,12 @@ export default {
       fd.append("price", this.price);
       fd.append("description", this.description);
       fd.append("image", this.selectFile, this.selectFile.name);
-      try {
-        axios.post(`me`, fd).then((res) => {
-          console.log(res, "Nouveau canvas envoyé");
-          alert("Ta photo a bien été enregistré");
-          let route = this.$router.resolve({ path: "/" });
-          window.open(route.href);
-        });
-      } catch (error) {
-        console.error(error.response.data);
-      }
-    },
-    returnPage() {
-      this.$router.push("/create");
+      axios.post(`me`, fd).then((res) => {
+        console.log(res, "Nouveau canvas envoyé");
+        alert("Ta photo a bien été enregistré");
+        let route = this.$router.resolve({ path: "/" });
+        window.open(route.href);
+      });
     },
   },
 };

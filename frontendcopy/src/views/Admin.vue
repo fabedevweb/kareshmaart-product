@@ -62,7 +62,7 @@ export default {
     },
     login: function () {
       axios
-        .post(`auth/login`, {
+        .post(`http://localhost:3000/api/auth/login`, {
           email: this.email,
           password: this.password,
         })
@@ -84,7 +84,6 @@ export default {
 </script>
 
 <style scoped>
-/*New*/
 .background {
   font-family: new-order, sans-serif;
   font-weight: 900;

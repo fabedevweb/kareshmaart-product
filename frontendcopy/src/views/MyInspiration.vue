@@ -1,11 +1,11 @@
 <template>
   <div>
-    <div class="your mx-auto bg-dark" style="padding: 8rem 1rem 8rem 1rem">
+    <div class="your mx-auto bg-dark" style="padding: 5rem 5rem">
       <h2 class="your-header text-white">Mes inspirations</h2>
-      <p class="your-para text-white fs-5 text-justify">
+      <p class="text-white fs-5">
         Retrouvez ici mes oeuvres, inspirées de tout ce que j'aime observer à
-        l'île Maurice. Capter les instants de la vie et les immortaliser sur une
-        toile, voilà ce que je souhaite.
+        l'île Maurice. Capter les instants de la vie, et les immortaliser sur
+        une toile, voilà ce que je souhaite.
       </p>
     </div>
     <div class="container container-bg">
@@ -18,6 +18,9 @@
           >
             <img :src="picture.picture" class="container__img" alt="" />
             <p class="container-picture text-dark w-100">
+              <span class="container-picture__name h4"
+                >"{{ picture.name }}"</span
+              ><br />
               <button
                 class="button-78"
                 role="button"
@@ -60,7 +63,7 @@ export default {
   },
   mounted: function () {
     axios
-      .get(`me`)
+      .get(`http://localhost:3000/api/me`)
       .then((res) => {
         this.pictures = res.data;
         console.log(this.pictures);
@@ -92,8 +95,5 @@ export default {
 <style>
 .container-bg {
   background-color: rgba(0, 0, 0, 0.5);
-}
-.image {
-  border-radius: 50px;
 }
 </style>

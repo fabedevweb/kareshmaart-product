@@ -6,7 +6,6 @@
         src="../assets/blog.webp"
         style="width: 100%"
         alt=""
-        id="Blog"
       />
     </div>
     <div
@@ -14,11 +13,13 @@
       style="padding: 5rem 5rem; background-color: rgba(0, 0, 0, 0.5)"
     >
       <h1 class="your-header text-white">Blog KareshmaArt</h1>
-      <p class="text-white fs-5 d-flex mx-auto">
-        Retrouvez ici mes quelques apparitions en galerie et médias.
+      <p class="text-white fs-5">
+        Retrouvez ici mes oeuvres, inspirées de tout ce que j'aime observer à
+        l'île Maurice. Capter les instants de la vie, et les immortaliser sur
+        une toile, voilà ce que je souhaite.
       </p>
     </div>
-    <!--YO-->
+
     <div
       class="my-4 container-bg mt-5"
       :key="index"
@@ -53,12 +54,11 @@
       </div>
     </div>
     <div id="scroll_to_top">
-      <a href="#Blog" style="font-size: 1.4rem; color: #deca1f">
-        <b-icon
-          icon="brush-fill"
-          animation="cylon-vertical"
-          font-scale="2"
-        ></b-icon
+      <a href="#Blog"
+        ><i
+          class="fa-solid fa-circle-arrow-up"
+          style="font-size: 5rem; color: yellow"
+        ></i
       ></a>
     </div>
   </div>
@@ -78,7 +78,7 @@ export default {
   },
   mounted: function () {
     axios
-      .get(`/blog`)
+      .get(`http://localhost:3000/api/blog`)
       .then((res) => {
         this.pictures = res.data;
         console.log(this.pictures);
@@ -105,7 +105,7 @@ export default {
   background-color: rgba(0, 0, 0, 0.5);
 }
 .card-block {
-  width: 98%;
+  width: 70%;
 }
 .card-text::first-letter {
   font-size: 200%;
