@@ -128,16 +128,12 @@ export default {
       fd.append("price", this.price);
       fd.append("description", this.description);
       fd.append("image", this.selectFile, this.selectFile.name);
-      try {
-        axios.post(`me/`, fd).then((res) => {
-          console.log(res, "Nouveau canvas envoyé");
-          alert("Ta photo a bien été enregistré");
-          let route = this.$router.resolve({ path: "/" });
-          window.open(route.href);
-        });
-      } catch (error) {
-        console.error(error.response.data);
-      }
+      axios.post(`me`, fd).then((res) => {
+        console.log(res, "Nouveau canvas envoyé");
+        alert("Ta photo a bien été enregistré");
+        let route = this.$router.resolve({ path: "/" });
+        window.open(route.href);
+      });
     },
     returnPage() {
       this.$router.push("/create");
