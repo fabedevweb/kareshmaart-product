@@ -12,10 +12,7 @@ const storage = multer.diskStorage({
   //destination dit à multer ou enregistrer le fichier, ici dans le fichier "images"
   destination: (req, file, callback) => {
     //"images" correspond au dossier "images" que j'ai crée dans le dossier backend
-    callback(
-      null,
-      "/Users/fabriceavrila/Desktop/Mes projets/kareshma/kareshmaart-product/backend/images"
-    );
+    callback(null, "/home/avfa5526/kareshmaart-server/images");
   },
   //filename explique à multer quel nom de fichier utiliser pour éviter d'avoir un bug si deux fichiers ont le même nom
   filename: (req, file, callback) => {
