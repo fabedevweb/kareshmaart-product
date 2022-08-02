@@ -8,7 +8,7 @@ import NewArticle from "../views/NewArticle.vue";
 import SetCanvasMe from "../views/SetCanvasMe.vue";
 import SetCanvasYour from "../views/SetCanvasYour.vue";
 import SetMyBlog from "../views/SetMyBlog.vue";
-//import Realisations from "../views/Realisations.vue";
+import Tableaux from "../views/Tableaux.vue";
 import YourInspiration from "../views/YourInspiration.vue";
 import MyInspiration from "../views/MyInspiration.vue";
 Vue.use(VueRouter);
@@ -22,12 +22,19 @@ const router = new VueRouter({
       component: Home,
     },
     {
-      path: "/MyInspiration",
-      component: MyInspiration,
-    },
-    {
-      path: "/YourInspiration",
-      component: YourInspiration,
+      path: "/Tableaux",
+      name: "Tableaux",
+      component: Tableaux,
+      children: [
+        {
+          path: "/MyInspiration",
+          component: MyInspiration,
+        },
+        {
+          path: "/YourInspiration",
+          component: YourInspiration,
+        },
+      ],
     },
     {
       path: "/blog",
