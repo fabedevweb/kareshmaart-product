@@ -123,6 +123,7 @@ export default {
     hideMenu() {
       if (
         this.$route.path === "/Create" ||
+        this.$route.path === "/create" ||
         this.$route.path === "/admin" ||
         this.$route.path === "/home" ||
         this.$route.path === "/NewCanvasMe" ||
