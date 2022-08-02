@@ -128,7 +128,7 @@ export default {
       fd.append("price", this.price);
       fd.append("description", this.description);
       fd.append("image", this.selectFile, this.selectFile.name);
-      axios.post(`your`, fd).then((res) => {
+      axios.post(`your/`, fd).then((res) => {
         console.log(res, "Nouveau canvas envoyé");
         alert("Ta photo a bien été enregistré");
         let route = this.$router.resolve({ path: "/" });
