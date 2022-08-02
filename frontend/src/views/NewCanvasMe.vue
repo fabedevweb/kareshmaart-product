@@ -132,9 +132,9 @@ export default {
         .post(`me`, fd)
         .then((res) => {
           console.log(res, "Nouveau canvas envoyé");
-          alert("Ta photo a bien été enregistré");
-          let route = this.$router.resolve({ path: "/" });
-          window.open(route.href);
+          //alert("Ta photo a bien été enregistré");
+          //let route = this.$router.resolve({ path: "/" });
+          //window.open(route.href);
         })
         .catch((error) => {
           // here you will have access to error.response
