@@ -1,18 +1,6 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
-import Create from "../views/Create.vue";
-import NewCanvasMe from "../views/NewCanvasMe.vue";
-import NewCanvasYour from "../views/NewCanvasYour.vue";
-import NewArticle from "../views/NewArticle.vue";
-import SetCanvasMe from "../views/SetCanvasMe.vue";
-import SetCanvasYour from "../views/SetCanvasYour.vue";
-import SetMyBlog from "../views/SetMyBlog.vue";
-import Tableaux from "../views/Tableaux.vue";
-import YourInspiration from "../views/YourInspiration.vue";
-import MyInspiration from "../views/MyInspiration.vue";
-import Mentions from "../views/Mentions.vue";
-import Cgu from "../views/Cgu.vue";
 
 Vue.use(VueRouter);
 
@@ -27,16 +15,22 @@ const router = new VueRouter({
     },
     {
       path: "/Tableaux",
-      name: "Tableaux",
-      component: Tableaux,
+      component: () =>
+        import(/* webpackChunkName: "about" */ "../views/Tableaux.vue"),
       children: [
         {
           path: "/MyInspiration",
-          component: MyInspiration,
+          component: () =>
+            import(
+              /* webpackChunkName: "about" */ "../views/MyInspiration.vue"
+            ),
         },
         {
           path: "/YourInspiration",
-          component: YourInspiration,
+          component: () =>
+            import(
+              /* webpackChunkName: "about" */ "../views/YourInspiration.vue"
+            ),
         },
       ],
     },
@@ -88,48 +82,48 @@ const router = new VueRouter({
 
     {
       path: "/create",
-      name: "Create",
-      component: Create,
+      component: () =>
+        import(/* webpackChunkName: "about" */ "../views/Create.vue"),
     },
     {
       path: "/newCanvasMe",
-      name: "NewCanvasMe",
-      component: NewCanvasMe,
+      component: () =>
+        import(/* webpackChunkName: "about" */ "../views/NewCanvasMe.vue"),
     },
     {
       path: "/newCanvasYour",
-      name: "NewCanvasYour",
-      component: NewCanvasYour,
+      component: () =>
+        import(/* webpackChunkName: "about" */ "../views/NewCanvasYour.vue"),
     },
     {
       path: "/newArticle",
-      name: "NewArticle",
-      component: NewArticle,
+      component: () =>
+        import(/* webpackChunkName: "about" */ "../views/NewArticle.vue"),
     },
     {
       path: "/setCanvasMe",
-      name: "SetCanvasMe",
-      component: SetCanvasMe,
+      component: () =>
+        import(/* webpackChunkName: "about" */ "../views/SetCanvasMe.vue"),
     },
     {
       path: "/setCanvasYour",
-      name: "SetCanvasYour",
-      component: SetCanvasYour,
+      component: () =>
+        import(/* webpackChunkName: "about" */ "../views/SetCanvasYour.vue"),
     },
     {
       path: "/setMyBlog",
-      name: "SetMyBlog",
-      component: SetMyBlog,
+      component: () =>
+        import(/* webpackChunkName: "about" */ "../views/SetMyBlog.vue"),
     },
     {
       path: "/mentions",
-      name: "Mentions",
-      component: Mentions,
+      component: () =>
+        import(/* webpackChunkName: "about" */ "../views/Mentions.vue"),
     },
     {
       path: "/cgu",
-      name: "Cgu",
-      component: Cgu,
+      component: () =>
+        import(/* webpackChunkName: "about" */ "../views/Cgu.vue"),
     },
   ],
 });
