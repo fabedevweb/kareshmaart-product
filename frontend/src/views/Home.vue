@@ -12,12 +12,12 @@
           <h1 class="navigation-name-header">Artiste peintre</h1>
         </div>
         <div class="wrap navigation-enter mt-5">
-          <router-link
+          <button
             class="button text-decoration-none navigation-enter"
-            to="/Tableaux"
+            @click="picture()"
           >
             Bienvenue sur mon site
-          </router-link>
+          </button>
         </div>
       </div>
     </div>
@@ -26,6 +26,11 @@
 
 <script>
 export default {
+  methods: {
+    picture() {
+      this.$router.push({ path: "/Tableaux" });
+    },
+  },
   metaInfo: {
     title: "Accueil",
     meta: [

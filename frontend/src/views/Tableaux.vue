@@ -25,7 +25,7 @@
         >
           <a
             class="button col-md-4 text-decoration-none mx-auto"
-            href="#MyInspiration"
+            @click="scrollMeTo()"
           >
             <div class="cards d-flex mx-auto rounded">
               <div>
@@ -60,12 +60,12 @@
             icon="brush-fill"
             animation="cylon-vertical"
             font-scale="2"
+            style="margin-top: 24px"
           ></b-icon
-          >TOP</a
-        >
+        ></a>
       </div>
     </div>
-    <my-inspiration id="MyInspiration"></my-inspiration>
+    <my-inspiration></my-inspiration>
     <your-inspiration id="YourInspiration"></your-inspiration>
   </div>
 </template>
@@ -75,9 +75,17 @@ import YourInspiration from "./YourInspiration.vue";
 import MyInspiration from "./MyInspiration.vue";
 
 export default {
+  methods: {
+    scrollMeTo() {
+      window.scrollTo(0, 1500);
+    },
+  },
   components: {
     YourInspiration,
     MyInspiration,
+  },
+  mounted: function () {
+    window.scrollTo(0, 1000);
   },
 };
 </script>
@@ -194,10 +202,12 @@ export default {
 #scroll_to_top {
   z-index: 5;
   position: fixed;
-  width: 25px;
-  height: 25px;
-  bottom: 300px;
-  right: 20%;
+  width: 100px;
+  height: 100px;
+  bottom: 10px;
+  right: 1%;
+  background-color: black;
+  border-radius: 50%;
 }
 #scroll_to_top img {
   width: 10px;

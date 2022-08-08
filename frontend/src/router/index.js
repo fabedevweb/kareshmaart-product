@@ -9,8 +9,6 @@ import SetCanvasMe from "../views/SetCanvasMe.vue";
 import SetCanvasYour from "../views/SetCanvasYour.vue";
 import SetMyBlog from "../views/SetMyBlog.vue";
 import Tableaux from "../views/Tableaux.vue";
-import YourInspiration from "../views/YourInspiration.vue";
-import MyInspiration from "../views/MyInspiration.vue";
 import Mentions from "../views/Mentions.vue";
 import Cgu from "../views/Cgu.vue";
 
@@ -26,16 +24,6 @@ const routes = [
     path: "/Tableaux",
     name: "Tableaux",
     component: Tableaux,
-    children: [
-      {
-        path: "/MyInspiration",
-        component: MyInspiration,
-      },
-      {
-        path: "/YourInspiration",
-        component: YourInspiration,
-      },
-    ],
   },
   {
     path: "/blog",
@@ -130,7 +118,7 @@ const routes = [
 ];
 
 const router = new VueRouter({
-  //mode: "history",
+  mode: "history",
   //base: process.env.BASE_URL,
   routes,
 });
